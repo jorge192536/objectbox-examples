@@ -4,6 +4,7 @@ import java.util.Date;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.annotation.Unique;
 
 @Entity
 public class Note {
@@ -11,7 +12,7 @@ public class Note {
     @Id
     long id;
 
-    String text;
+    @Unique String text;
     String comment;
     Date date;
 
